@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX with XML Http Request</title>
+</head>
+
+<body>
+
+    <h1>Countries and Capitals</h1>
+    <ul id="countries"></ul>
+
+    <h1>Countries and Currencies</h1>
+    <ul id="currencies"></ul>
+
+    <script>
+        // Function to fetch countries and capitals
+        function fetchCountriesAndCapitals() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://localhost:3000/countries', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    displayCountriesAndCapitals(data);
+                }
+            };
+            xhr.send();
+        }
+
+        function displayCountriesAndCapitals(data) {
+            const ul = document.getElementById('countries');
+            ul.innerHTML = '';
+            data.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.country} - ${item.capital}`;
+                ul.appendChild(li);
+            });
+        }
+
+        // Function to fetch countries and currencies
+        function fetchCountriesAndCurrencies() {
+            var xhr2 = new XMLHttpRequest();
+            xhr2.open('GET', 'http://localhost:3000/countries-currencies', true);
+            xhr2.onreadystatechange = function() {
+                if (xhr2.readyState == 4 && xhr2.status == 200) {
+                    var data = JSON.parse(xhr2.responseText);
+                    displayCountriesAndCurrencies(data);
+                }
+            };
+            xhr2.send();
+        }
+
+        function displayCountriesAndCurrencies(data) {
+            const ul = document.getElementById('currencies');
+            ul.innerHTML = '';
+            data.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.country} - ${item.currency}`;
+                ul.appendChild(li);
+            });
+        }
+
+        // Invoke the functions on page load
+        window.onload = function() {
+            fetchCountriesAndCapitals();
+            fetchCountriesAndCurrencies();
+        }
+    </script>
+
+</body>
+
+</html>

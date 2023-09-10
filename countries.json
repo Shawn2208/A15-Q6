@@ -1,0 +1,57 @@
+[
+    {
+        "country": "Canada",
+        "capital": "Ottawa",
+        "currency": "Canadian Dollar"
+    },
+    {
+        "country": "France",
+        "capital": "Paris",
+        "currency": "Euro"
+    },
+    {
+        "country": "United States",
+        "capital": "Washington, D.C.",
+        "currency": "US Dollar"
+    },
+    {
+        "country": "Brazil",
+        "capital": "Brasília",
+        "currency": "Brazilian Real"
+    },
+    {
+        "country": "Australia",
+        "capital": "Canberra",
+        "currency": "Australian Dollar"
+    },
+    {
+        "country": "India",
+        "capital": "New Delhi",
+        "currency": "Indian Rupee"
+    },
+    {
+        "country": "Japan",
+        "capital": "Tokyo",
+        "currency": "Japanese Yen"
+    },
+    {
+        "country": "South Africa",
+        "capital": "Pretoria",
+        "currency": "South African Rand"
+    },
+    {
+        "country": "Russia",
+        "capital": "Moscow",
+        "currency": "Russian Ruble"
+    },
+    {
+        "country": "China",
+        "capital": "Beijing",
+        "currency": "Chinese Yuan"
+    },
+    {
+        "country": "Germany",
+        "capital": "Berlin",
+        "currency": "Euro"
+    }
+]
